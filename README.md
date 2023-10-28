@@ -12,6 +12,6 @@ Puede ver las instrucciones de los ejercicios de laboratorio en [https://microso
 
 ## ¿Cómo contribuyo?
 
-- Cualquier usuario puede enviar una solicitud de extracción al código o contenido en el reproductor de GitHub, Microsoft y el autor del curso seleccionará e incluirá los cambios de contenido y de laboratorio según sea necesario.
+- Cualquier usuario puede enviar una solicitud de extracción al código o contenido en el repositorio de GitHub, Microsoft y el autor del curso seleccionará e incluirá los cambios de contenido y de laboratorio según sea necesario.
 
 - Puede enviar errores, cambios, mejoras e ideas.  ¿Encontró una nueva característica de Azure antes que nosotros?  ¡Envíe una nueva demostración!
