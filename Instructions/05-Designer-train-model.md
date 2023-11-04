@@ -15,7 +15,7 @@ Necesitará una [suscripción de Azure](https://azure.microsoft.com/free?azure-p
 
 ## Aprovisionar un área de trabajo de Azure Machine Learning
 
-Un *área de trabajo* de Azure Machine Learning proporciona un lugar central para administrar todos los recursos y recursos que necesita para entrenar y administrar los modelos. Puede interactuar con el área de trabajo de Azure Machine Learning a través de Studio, el SDK de Python y la CLI de Azure. 
+Un *área de trabajo* de Azure Machine Learning proporciona un lugar central para administrar todos los recursos y recursos que necesita para entrenar y administrar los modelos. Puede interactuar con el área de trabajo de Azure Machine Learning a través de Studio, el SDK de Python y la CLI de Azure.
 
 Usará un script de Shell que usa la CLI de Azure para aprovisionar el área de trabajo y los recursos necesarios. A continuación, usará el Diseñador en el Estudio de Azure Machine Learning para entrenar y comparar modelos.
 
@@ -25,7 +25,7 @@ Para crear el área de trabajo de Azure Machine Learning y un clúster de proces
 
 1. En un explorador, abra el portal Azure en `https://portal.azure.com/`, iniciando sesión con su cuenta Microsoft.
 1. Seleccione el botón \[>_] (*Cloud Shell*) en la parte superior de la página, a la derecha del cuadro de búsqueda. Se abre un panel de Cloud Shell en la parte inferior del portal.
-1. Seleccione **Bash** si se le pregunta. La primera vez que abra el shell de la nube, se le pedirá que elija el tipo de shell que desea utilizar (*Bash* o *PowerShell*). 
+1. Seleccione **Bash** si se le pregunta. La primera vez que abra el shell de la nube, se le pedirá que elija el tipo de shell que desea utilizar (*Bash* o *PowerShell*).
 1. Compruebe que se ha especificado la suscripción correcta y seleccione **Crear almacenamiento** si se le pide que cree almacenamiento para el shell de la nube. Espere a que se cree el almacén.
 1. En el terminal, escriba los siguientes comandos para clonar este repositorio:
 
@@ -34,7 +34,7 @@ Para crear el área de trabajo de Azure Machine Learning y un clúster de proces
     git clone https://github.com/MicrosoftLearning/mslearn-azure-ml.git azure-ml-labs
     ```
 
-    > Use `SHIFT + INSERT` para pegar el código copiado en Cloud Shell. 
+    > Use `SHIFT + INSERT` para pegar el código copiado en Cloud Shell.
 
 1. Una vez clonado el repositorio, escriba los siguientes comandos para cambiar a la carpeta de este laboratorio y ejecute el script setup.sh que contiene:
 
@@ -43,25 +43,26 @@ Para crear el área de trabajo de Azure Machine Learning y un clúster de proces
     ./setup.sh
     ```
 
-    > Omita los mensajes (error) que digan que las extensiones no se instalaron. 
+    > Omita los mensajes (error) que digan que las extensiones no se instalaron.
 
-1. Espere a que se complete el script: normalmente tarda entre 5 y 10 minutos. 
+1. Espere a que se complete el script: normalmente tarda entre 5 y 10 minutos.
 
 ## Configuración de una nueva canalización
 
-Cuando haya creado el área de trabajo y el clúster de proceso necesario, puede abrir el Estudio de Azure Machine Learning y crear una canalización de entrenamiento con el Diseñador. 
+Cuando haya creado el área de trabajo y el clúster de proceso necesario, puede abrir el Estudio de Azure Machine Learning y crear una canalización de entrenamiento con el Diseñador.
 
-1. En el Azure Portal, vaya al área de trabajo de Azure Machine Learning denominada **mlw-dp100-labs**.
+1. En Azure Portal, vaya al área de trabajo de Azure Machine Learning denominada **mlw-dp100-...** .
 1. Seleccione el área de trabajo de Azure Machine Learning y, en su página **Información general**, seleccione **Iniciar Studio**. Se abrirá otra pestaña en el explorador para abrir el Estudio de Azure Machine Learning.
 1. Cierre los elementos emergentes que aparecen en Studio.
 1. En el Estudio de Azure Machine Learning, vaya a la página **Proceso** y compruebe que el clúster de proceso que creó en la sección anterior existen. El clúster debe estar inactivo y tener 0 nodos en ejecución.
 1. Vaya a la página **Diseñador**.
 1. Seleccione la pestaña **Personalizar** en la parte superior de la página.
 1. Cree una canalización vacía mediante componentes personalizados.
-1. Cambie el nombre de canalización predeterminado (**Pipeline-Created-on-* date***) a `Train-Diabetes-Classifier` haciendo clic en el icono **&#9881;** de la derecha para abrir el panel **Configuración**.
-1. Tendrá que especificar un destino de proceso en el que ejecutar la canalización. En el panel **Configuración**, en **Seleccione el tipo de cálculo**, seleccione **Clúster de cálculo**, y en **Seleccione el clúster de cálculo Azure ML**, seleccione **aml-cluster**. Cierre la ventana Configuración.
+1. Cambie el nombre de canalización predeterminado (**Pipeline-Created-on-* date***) a `Train-Diabetes-Classifier` al seleccionar el icono de lápiz de su derecha.
+
 
 ## Creación de una canalización
+
 Para entrenar un modelo, necesitará datos. Puede usar cualquier dato almacenado en un almacén de datos o usar una dirección URL accesible públicamente.
 
 1. En el menú de la izquierda, seleccione la pestaña **Datos**.
@@ -70,32 +71,36 @@ Para entrenar un modelo, necesitará datos. Puede usar cualquier dato almacenado
     Ahora que tiene los datos, puede continuar creando una canalización mediante componentes personalizados que ya existen en el área de trabajo (se crearon automáticamente durante la instalación).
 
 1. En el menú izquierdo, seleccione la pestaña **Componentes**.
-1. Arrastre y coloque el componente **Quitar filas vacías** en el lienzo, debajo de **carpeta-diabetes.** 
+1. Arrastre y coloque el componente **Quitar filas vacías** en el lienzo, debajo de **carpeta-diabetes.**
 1. Conecte la salida de los datos a la entrada del nuevo componente.
-1. Arrastre y coloque el componente **Normalizar columnas numéricas** en el lienzo, debajo de **Quitar filas vacías**. 
+1. Arrastre y coloque el componente **Normalizar columnas numéricas** en el lienzo, debajo de **Quitar filas vacías**.
 1. Conecte la salida del componente anterior a la entrada del nuevo componente.
-1. Arrastre y suelte el componente **Entrenar un modelo clasificador de árbol de decisión** en el lienzo, debajo de **Eliminar filas vacías**.
-1. Conecte la salida del componente anterior a la entrada del nuevo componente. 
-1. Envíe la canalización. 
-1. Cree un nuevo experimento y nómbrelo `diabetes-designer-pipeline`. 
+1. Arrastre y suelte el componente **Entrenar un modelo clasificador de árbol de decisión** en el lienzo, debajo de **Normalizar columnas numéricas**.
+1. Conecte la salida del componente anterior a la entrada del nuevo componente.
+1. Seleccione **Configurar y enviar** y, en la página **Configurar trabajo de canalización**, cree un nuevo experimento y asígnele el nombre `diabetes-designer-pipeline`. Después, seleccione **Siguiente**.
+1. En **Entradas y salidas**, no realice ningún cambio y seleccione **Siguiente**.
+1. En **Configuración del entorno de ejecución**, seleccione **Clúster de proceso** y, en **Seleccionar clúster de proceso de Azure ML**, seleccione el clúster *aml-cluster*.
+1. Seleccione **Revisar y enviar** y, después, seleccione **Enviar** para iniciar la ejecución de la canalización.
+1. Para comprobar el estado de la ejecución, vaya a la página **Canalizaciones** y seleccione la canalización **Train-Diabetes-Classifier**.
 1. Espere hasta que todos los componentes se hayan completado correctamente.
 
-    El envío del trabajo inicializará el clúster de proceso. Como el clúster de proceso estaba inactivo hasta ahora, puede tardar algún tiempo en cambiar el tamaño del clúster a más de 0 nodos. Una vez que el clúster haya cambiado de tamaño, se iniciará automáticamente la ejecución de la canalización. 
+    El envío del trabajo inicializará el clúster de proceso. Como el clúster de proceso estaba inactivo hasta ahora, puede tardar algún tiempo en cambiar el tamaño del clúster a más de 0 nodos. Una vez que el clúster haya cambiado de tamaño, se iniciará automáticamente la ejecución de la canalización.
 
-1. Para ver el estado de la ejecución de la canalización, seleccione **Detalles del trabajo** en el panel **Trabajos enviados** de la izquierda.
-
-Podrá realizar un seguimiento de la ejecución de cada componente. Cuando se produce un error en la canalización, podrá explorar qué componente produjo un error y por qué se produjo un error. Los mensajes de error se mostrarán en la pestaña **Salidas y registros** de la información general del trabajo. 
+Podrá realizar un seguimiento de la ejecución de cada componente. Cuando se produce un error en la canalización, podrá explorar qué componente produjo un error y por qué se produjo un error. Los mensajes de error se mostrarán en la pestaña **Salidas y registros** de la información general del trabajo.
 
 ## Entrenamiento de un segundo modelo para comparar
 
 Para comparar entre algoritmos y evaluar qué funciona mejor, puede entrenar dos modelos dentro de una canalización y compararlos.
 
-1. Dentro de la misma canalización en la que ha estado trabajando hasta ahora
+1. Vuelva al **Diseñador** y seleccione el borrador de canalización **Train-Diabetes-Classifier**.
 1. Agregue el componente **Entrenar un modelo clasificador de regresión logística** al lienzo, junto al otro componente de entrenamiento.
-1. Conecte la salida del componente **Normalizar columnas numéricas** a la entrada del nuevo componente de entrenamiento. 
-1. En la parte superior, seleccione **Enviar**. 
-1. Cuando se le solicite, cree un nuevo experimento denominado `designer-compare-classification`, y ejecútelo.  
-1. Cuando se haya completado la canalización, revise las **Métricas** de ambos componentes de entrenamiento.
+1. Conecte la salida del componente **Normalizar columnas numéricas** a la entrada del nuevo componente de entrenamiento.
+1. En la parte superior, seleccione **Configurar y enviar**.
+1. En la página **Aspectos básicos**, cree un nuevo experimento denominado `designer-compare-classification` y ejecútelo.
+1. Seleccione **Revisar y enviar** y, después, seleccione **Enviar** para iniciar la ejecución de la canalización.
+1. Para comprobar el estado de la ejecución, vaya a la página **Canalizaciones** y seleccione la canalización **Train-Diabetes-Classifier** con el experimento **designer-compare-classification**.
+1. Espere hasta que todos los componentes se hayan completado correctamente.  
+1. Seleccione **Información general del trabajo** y, después, seleccione la pestaña **Métricas** para revisar los resultados de ambos componentes de entrenamiento.
 1. Pruebe y determine qué modelo ha realizado mejor.
 
 ## Eliminación de recursos de Azure
@@ -104,6 +109,6 @@ Cuando termine de explorar Azure Machine Learning, debe eliminar los recursos qu
 
 1. Cierre la pestaña Estudio de Azure Machine Learning y vuelva al Azure Portal.
 1. En Azure Portal, en la página **Inicio**, seleccione **Grupos de recursos**.
-1. Seleccione el grupo de recursos **rg-dp100-labs**.
-1. En la parte superior de la página **Información general** del grupo de recursos, seleccione **Eliminar grupo de recursos**. 
+1. Seleccione el grupo de recursos **rg-dp100-...** .
+1. En la parte superior de la página **Información general** del grupo de recursos, seleccione **Eliminar grupo de recursos**.
 1. Escriba el nombre del grupo de recursos para confirmar que quiere eliminarlo y seleccione **Eliminar**.
