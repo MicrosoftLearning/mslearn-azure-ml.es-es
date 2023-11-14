@@ -51,7 +51,7 @@ Para crear el área de trabajo de Azure Machine Learning, una instancia de proce
 
 Cuando haya creado el área de trabajo y los recursos de proceso necesarios, puede abrir el Estudio de Azure Machine Learning y clonar los materiales del laboratorio en el área de trabajo.
 
-1. En Azure Portal, vaya al área de trabajo de Azure Machine Learning denominada **mlw-dp100-...** .
+1. En el Azure Portal, vaya al área de trabajo de Azure Machine Learning denominada **mlw-dp100-...** .
 1. Seleccione el área de trabajo de Azure Machine Learning y, en su página **Información general**, seleccione **Iniciar Studio**. Se abrirá otra pestaña en el explorador para abrir el Estudio de Azure Machine Learning.
 1. Cierre los elementos emergentes que aparecen en Studio.
 1. En el Estudio de Azure Machine Learning, vaya a la página **Proceso** y compruebe que la instancia de proceso y el clúster que creó en la sección anterior existen. La instancia de proceso debe estar en ejecución, el clúster debe estar inactivo y tener 0 nodos en ejecución.
