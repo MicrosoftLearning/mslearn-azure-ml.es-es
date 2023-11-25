@@ -51,7 +51,7 @@ Para crear el área de trabajo de Azure Machine Learning y los recursos de proce
 
 Al crear un área de trabajo de Azure Machine Learning, se crea automáticamente una cuenta de almacenamiento y se conecta al área de trabajo. Explorará cómo está conectada la cuenta de almacenamiento.
 
-1. En Azure Portal, vaya al nuevo grupo de recursos denominado **rg-dp100-...** .
+1. En Azure Portal, vaya al nuevo grupo de recursos denominado **rg-dp100-...**.
 1. Seleccione la cuenta de almacenamiento en el grupo de recursos. El nombre suele comenzar con el nombre que proporcionó para el área de trabajo (sin guiones).
 1. Revise la página **Información general** de la cuenta de almacenamiento. Tenga en cuenta que la cuenta de almacenamiento tiene varias opciones para **Almacenamiento de datos**, como se muestra en el panel Información general y en el menú izquierdo.
 1. Seleccione **Contenedores** para explorar la parte de Blob Storage de la cuenta de almacenamiento.

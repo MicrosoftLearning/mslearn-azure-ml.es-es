@@ -51,7 +51,7 @@ Para crear el área de trabajo de Azure Machine Learning y un clúster de proces
 
 Cuando haya creado el área de trabajo y el clúster de proceso necesario, puede abrir el Estudio de Azure Machine Learning y crear una canalización de entrenamiento con el Diseñador.
 
-1. En Azure Portal, vaya al área de trabajo de Azure Machine Learning denominada **mlw-dp100-...** .
+1. En el Azure Portal, vaya al área de trabajo de Azure Machine Learning denominada **mlw-dp100-...** .
 1. Seleccione el área de trabajo de Azure Machine Learning y, en su página **Información general**, seleccione **Iniciar Studio**. Se abrirá otra pestaña en el explorador para abrir el Estudio de Azure Machine Learning.
 1. Cierre los elementos emergentes que aparecen en Studio.
 1. En el Estudio de Azure Machine Learning, vaya a la página **Proceso** y compruebe que el clúster de proceso que creó en la sección anterior existen. El clúster debe estar inactivo y tener 0 nodos en ejecución.
