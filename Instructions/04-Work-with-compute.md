@@ -88,15 +88,17 @@ Para crear la instancia de proceso, puede usar Studio, el SDK de Python o la CLI
     - **Nombre del proceso**: *escriba un nombre único*
     - **Tipo de máquina virtual**: *CPU*
     - **Tamaño de máquina virtual**: *Standard_DS11_v2*
-1. Seleccione **Siguiente: Configuración avanzada**.
+1. Seleccione **Siguiente**.
 1. Seleccione **Agregar programación** y configure la programación para **detener** la instancia de proceso todos los días a **las 18:00** o **6:00 p.m**.
-1. Seleccione el botón de alternancia para **Aprovisionar con el script de configuración**.
-1. Seleccione el script **compute-setup.sh** que creó anteriormente.
-1. Revise la demás configuración avanzada pero **no** la seleccione:
+1. Seleccione **Siguiente**.
+1. Revise la configuración de seguridad, pero **no** las seleccione:
     - **Habilitar acceso SSH**: *se puede usar para habilitar el acceso directo a la máquina virtual mediante un cliente SSH.*
     - **Habilitar red virtual**: *normalmente se usaría en un entorno empresarial para mejorar la seguridad de la red.*
     - **Asignar a otro usuario**: *puede utilizarlo para asignar una instancia de cálculo a otro científico de datos.*
-1. **Crear** la instancia de cálculo y esperar a que se inicie y su estado cambie a **En ejecución**.
+1. Seleccione **Siguiente**.
+1. Seleccione el botón de alternancia para **Aprovisionamiento con un script de creación**.
+1. Seleccione el script **compute-setup.sh** que creó anteriormente.
+1. Seleccione **Revisar y crear** para crear la instancia de proceso y esperar a que se inicie y su estado cambie a **En ejecución**.
 1. Cuando se ejecute la instancia de proceso, vaya a la página **Cuadernos**. En el panel **Archivos**, haga clic en **&#8635;** para actualizar la vista y comprobar que se ha creado una nueva carpeta **Users/*your-user-name*/dp100-azure-ml-labs**.
 
 ## Configuración de la instancia de proceso
