@@ -114,9 +114,10 @@ Después de convertir un cuaderno en un script, puede que desee refinarlo aún m
 
     Para ejecutar correctamente el script, deberá especificar el valor de los parámetros de datos de entrenamiento. Para ello, consulte el archivo **dediabetes.csv** que se almacena en la misma carpeta que el script de entrenamiento.
 
-1. En el terminal, ejecute el comando siguiente:
+1. En el terminal, ejecute los siguientes comandos:
 
     ```
+    cd azure-ml-labs/Labs/08/src/
     python train-model-parameters.py --training_data diabetes.csv
     ```
 
