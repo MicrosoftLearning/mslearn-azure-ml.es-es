@@ -28,7 +28,7 @@ Para empezar, abra azure Cloud Shell, instale la extensión de Azure Machine Lea
 1. En un explorador, abra el portal Azure en `https://portal.azure.com/`, iniciando sesión con su cuenta Microsoft.
 1. Seleccione el botón \[>_] (*Cloud Shell*) en la parte superior de la página, a la derecha del cuadro de búsqueda. Se abre un panel de Cloud Shell en la parte inferior del portal.
 1. Seleccione **Bash** si se le pregunta. La primera vez que abra el shell de la nube, se le pedirá que elija el tipo de shell que desea utilizar (*Bash* o *PowerShell*).
-1. Compruebe que se ha especificado la suscripción correcta y seleccione **Crear almacenamiento** si se le pide que cree almacenamiento para el shell de la nube. Espere a que se cree el almacén.
+1. Comprueba que se ha especificado la suscripción correcta y que se ha seleccionado **No se requiere ninguna cuenta de almacenamiento**. Seleccione **Aplicar**.
 1. Quite las extensiones de la CLI de ML (tanto la versión 1 como la 2) para evitar conflictos con versiones anteriores con este comando:
     
     ```azurecli
