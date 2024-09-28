@@ -90,6 +90,13 @@ El uso de un cuaderno asociado a una instancia de proceso es ideal para la exper
 1. Seleccione el icono de &#9655;&#9655; en la parte superior del cuaderno para **guardar y ejecutar el script en el terminal**.
 1. El script lo inicia el comando **python train-classification-model.py** y la salida debe mostrarse debajo del comando.
 
+   > **Nota:** si el script devuelve importError para libstdc++6, ejecuta los siguientes comandos en el terminal antes de volver a ejecutar el script:
+   > ```bash
+   > sudo add-apt-repository ppa:ubuntu-toolchain-r/test
+   > sudo apt-get update
+   > sudo apt-get upgrade libstdc++6
+   > ```
+
 ## Prueba de un script con el terminal
 
 Después de convertir un cuaderno en un script, puede que desee refinarlo aún más. Un procedimiento recomendado al trabajar con scripts es usar funciones. Cuando el script consta de funciones, es más fácil realizar pruebas unitarias del código. Al usar funciones, el script constará de bloques de código, cada bloque que realiza una tarea específica.
