@@ -85,6 +85,8 @@ Ahora que tiene todos los recursos necesarios, puede ejecutar el cuaderno para c
 1. Ejecute todas las celdas del cuaderno.
 1. Revise el nuevo trabajo que se crea cada vez que entrena un modelo.
 
+    > **Nota:** al entrenar un modelo, la salida de la celda mostrará un vínculo a la ejecución del trabajo. Si el vínculo devuelve un error, todavía puedes revisar la ejecución del trabajo al seleccionar **Trabajos** en el panel izquierdo.
+    
 ## Eliminación de recursos de Azure
 
 Cuando termine de explorar Azure Machine Learning, debe eliminar los recursos que ha creado para evitar costos innecesarios de Azure.
