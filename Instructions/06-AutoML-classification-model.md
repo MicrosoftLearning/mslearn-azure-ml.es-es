@@ -92,7 +92,9 @@ Ahora que tiene todos los recursos necesarios, puede ejecutar el cuaderno para c
 1. Espere a que su estado cambie a **Completado**.
 1. Una vez que el estado del trabajo de Machine Learning automatizado haya cambiado a **Completado**, explore los detalles del trabajo en Studio:
     - En la pestaña **Límites de protección de datos** se muestra si los datos de entrenamiento tuvieron algún problema.
-    - La pestaña **Modelos** mostrará todos los modelos entrenados. Seleccione **Ver explicación** para el mejor modelo para comprender qué características influyeron más en el valor de destino.
+    - La pestaña **Modelos + trabajos secundarios** mostrará todos los modelos que se han entrenado. Selecciona **Explicar modelo** para obtener el mejor modelo y crea la ejecución del trabajo de explicación mediante **aml-cluster**.
+    - Espera a que aparezca una nueva columna **Explicado** junto a la columna **Nombre del algoritmo** y selecciona **Ver explicación**. Es posible que tengas que actualizar la lista de algoritmos para que aparezca esta opción.
+    - Revisa el panel creado para comprender qué características han influido más en el valor de destino.
 
 ## Eliminación de recursos de Azure
 
