@@ -111,4 +111,4 @@ Cuando termine de explorar Azure Machine Learning, debe eliminar los recursos qu
 1. En Azure Portal, en la página **Inicio**, seleccione **Grupos de recursos**.
 1. Seleccione el grupo de recursos **rg-dp100-...** .
 1. En la parte superior de la página **Información general** del grupo de recursos, seleccione **Eliminar grupo de recursos**.
-1. Escriba el nombre del grupo de recursos para confirmar que quiere eliminarlo y seleccione **Eliminar**.
+1. Escribe el nombre del grupo de recursos para confirmar que quieres eliminarlo y selecciona **Eliminar**.
