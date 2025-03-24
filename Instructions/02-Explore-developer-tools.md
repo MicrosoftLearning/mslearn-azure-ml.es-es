@@ -112,13 +112,13 @@ Aunque la CLI de Azure es ideal para la automatización, es posible que desee re
 1. En el Azure Portal, vaya al área de trabajo de Azure Machine Learning denominada **mlw-dp100-labs**.
 1. Seleccione el área de trabajo de Azure Machine Learning y, en su página **Información general**, seleccione **Iniciar Studio**. Se abrirá otra pestaña en el explorador para abrir el Estudio de Azure Machine Learning.
 1. Cierre los elementos emergentes que aparecen en Studio.
-1. En el Estudio de Azure Machine Learning, vaya a la página **Proceso** y compruebe que la instancia de proceso y el clúster que creó en la sección anterior existen. La instancia de proceso debe estar en ejecución, el clúster debe estar inactivo y tener 0 nodos en ejecución.
+1. En el Estudio de Azure Machine Learning, vaya a la página **Proceso** y compruebe que la instancia de proceso y el clúster que creó en la sección anterior existen. La instancia de proceso debe estar en ejecución, el clúster debe estar en estado Correcto y tener 0 nodos en ejecución.
 
 ## Use el SDK de Python para entrenar un modelo
 
 Ahora que ha comprobado que se ha creado el proceso necesario, puede usar el SDK de Python para ejecutar un script de entrenamiento. Instalará y usará el SDK de Python en la instancia de proceso y entrenará el modelo de aprendizaje automático en el clúster de proceso.
 
-1. Seleccione la aplicación **Terminal** de la **instancia de proceso** para iniciar el terminal.
+1. En la **instancia de proceso**, hay varias opciones en el campo **Aplicaciones**. Selecciona la aplicación **Terminal** para iniciar el terminal (es posible que tengas que hacer clic en los puntos suspensivos para expandir la selección).
 1. En el terminal, instale el SDK de Python en la instancia de proceso mediante la ejecución de los siguientes comandos en el terminal:
 
     ```
@@ -139,7 +139,7 @@ Ahora que ha comprobado que se ha creado el proceso necesario, puede usar el SDK
 
     > Seleccione **Autenticar** y siga los pasos necesarios si aparece una notificación en la que se le pide que se autentique.
 
-1. Compruebe que el cuaderno usa el kernel de **Python 3.8- AzureML**. Cada kernel tiene su propia imagen con su propio conjunto de paquetes preinstalados.
+1. Comprueba que el cuaderno usa el kernel de **Python 3.8 - AzureML** en la esquina superior derecha del entorno del cuaderno. Cada kernel tiene su propia imagen con su propio conjunto de paquetes preinstalados.
 1. Ejecute todas las celdas del cuaderno.
 
 Se creará un nuevo trabajo en el área de trabajo de Azure Machine Learning. El trabajo realiza un seguimiento de las entradas definidas en la configuración del trabajo, el código usado y las salidas como métricas para evaluar el modelo.
