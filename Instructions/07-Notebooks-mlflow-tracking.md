@@ -46,6 +46,34 @@ Para crear el área de trabajo de Azure Machine Learning y una instancia de proc
 
 1. Espere a que se complete el script: normalmente tarda entre 5 y 10 minutos.
 
+    <details>
+    <summary><b>Sugerencia para solucionar problemas</b>: error de creación del área de trabajo</summary><br>
+    <p>Si recibes un error al ejecutar el script de instalación a través de la CLI, debes aprovisionar los recursos manualmente:</p>
+    <ol>
+        <li>En la página principal de Azure Portal, selecciona <b>+Crear un recurso</b>.</li>
+        <li>Busca <i>aprendizaje automático</i> y, después, selecciona <b>Azure Machine Learning</b>. Seleccione <b>Crear</b>.</li>
+        <li>Cree un recurso de Azure Machine Learning con la siguiente configuración: <ul>
+                <li><b>Suscripción</b>: <i>suscripción de Azure</i></li>
+                <li><b>Grupo de recursos</b>: rg-dp100-labs</li>
+                <li><b>Nombre del área de trabajo</b>: mlw-dp100-labs</li>
+                <li><b>Región</b>: <i>seleccione la región geográfica más cercana</i>.</li>
+                <li><b>Cuenta de almacenamiento</b>: <i>tenga en cuenta la nueva cuenta de almacenamiento predeterminada que se creará para el área de trabajo</i>.</li>
+                <li><b>Almacén de claves</b>: <i>tenga en cuenta el nuevo almacén de claves predeterminado que se creará para el área de trabajo</i>.</li>
+                <li><b>Application Insights</b>: <i>tenga en cuenta el nuevo recurso de Application Insights predeterminado que se creará para el área de trabajo</i>.</li>
+                <li><b>Registro de contenedor</b>: ninguno (<i>se creará uno automáticamente la primera vez que implemente un modelo en un contenedor</i>).</li>
+            </ul>
+        <li>Selecciona <b>Revisar y crear</b> y espera a que se cree el área de trabajo y sus recursos asociados: normalmente tarda unos 5 minutos.</li>
+        <li>Selecciona <b>Ir al recurso</b> y en su página <b>Información general</b>, selecciona <b>Iniciar Studio</b>. Se abrirá otra pestaña en el explorador para abrir el Estudio de Azure Machine Learning.</li>
+        <li>Cierre los elementos emergentes que aparecen en Studio.</li>
+        <li>En el Estudio de Azure Machine Learning, ve a la página <b>Proceso</b> y selecciona <b>+Nuevo</b> en la pestaña <b>Instancias de proceso</b>.</li>
+        <li>Asigna un nombre único a la instancia de proceso y, a continuación, selecciona <b>Standard_DS11_v2</b> como tamaño de máquina virtual.</li>
+        <li>Seleccione <b>Revisar y crear</b> y luego <b>Crear</b>.</li>
+        <li>A continuación, selecciona la pestaña <b>Clústeres de proceso</b> y selecciona <b>+ Nuevo</b>.</li>
+        <li>Elige la misma región en la que creaste el área de trabajo y, a continuación, selecciona <b>Standard_DS11_v2</b> como tamaño de máquina virtual. Seleccione <b>Siguiente</b>.</li>
+        <li>Asigna al clúster un nombre único y, a continuación, selecciona <b>Crear</b>.</li>
+    </ol>
+    </details>
+
 ## Clonación de los materiales de laboratorio
 
 Cuando haya creado el área de trabajo y los recursos de proceso necesarios, puede abrir el Estudio de Azure Machine Learning y clonar los materiales del laboratorio en el área de trabajo.

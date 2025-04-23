@@ -54,6 +54,26 @@ Para crear el área de trabajo de Azure Machine Learning, usará la CLI de Azure
 
 1. Espere a que se complete el comando: normalmente tarda entre 5 y 10 minutos.
 
+    <details>  
+    <summary><b>Sugerencia para solucionar problemas</b>: error de creación del área de trabajo</summary><br>
+    <p>Si recibes un error al crear un área de trabajo a través de la CLI, debes aprovisionar el recurso manualmente:</p>
+    <ol>
+        <li>En la página principal de Azure Portal, selecciona <b>+Crear un recurso</b>.</li>
+        <li>Busca <i>aprendizaje automático</i> y, después, selecciona <b>Azure Machine Learning</b>. Seleccione <b>Crear</b>.</li>
+        <li>Cree un recurso de Azure Machine Learning con la siguiente configuración: <ul>
+                <li><b>Suscripción</b>: <i>suscripción de Azure</i></li>
+                <li><b>Grupo de recursos</b>: rg-dp100-labs</li>
+                <li><b>Nombre del área de trabajo</b>: mlw-dp100-labs</li>
+                <li><b>Región</b>: <i>seleccione la región geográfica más cercana</i>.</li>
+                <li><b>Cuenta de almacenamiento</b>: <i>tenga en cuenta la nueva cuenta de almacenamiento predeterminada que se creará para el área de trabajo</i>.</li>
+                <li><b>Almacén de claves</b>: <i>tenga en cuenta el nuevo almacén de claves predeterminado que se creará para el área de trabajo</i>.</li>
+                <li><b>Application Insights</b>: <i>tenga en cuenta el nuevo recurso de Application Insights predeterminado que se creará para el área de trabajo</i>.</li>
+                <li><b>Registro de contenedor</b>: ninguno (<i>se creará uno automáticamente la primera vez que implemente un modelo en un contenedor</i>).</li>
+            </ul>
+        <li>Selecciona <b>Revisar y crear</b> y espera a que se cree el área de trabajo y sus recursos asociados: normalmente tarda unos 5 minutos.</li>
+    </ol>
+    </details>
+
 ## Creación del script de configuración del cálculo
 
 Para ejecutar cuadernos en el área de trabajo de Azure Machine Learning, necesitará una instancia de proceso. Puede usar un script de instalación para configurar la instancia de proceso al crearla.
