@@ -109,7 +109,7 @@ Ahora que tiene todos los recursos necesarios, puede ejecutar el cuaderno para c
 
     > Seleccione **Autenticar** y siga los pasos necesarios si aparece una notificación en la que se le pide que se autentique.
 
-1. Compruebe que el cuaderno usa el kernel de **Python 3.8- AzureML**.
+1. Comprueba que el cuaderno usa el kernel de **Python 3.10- AzureML**.
 1. Ejecute todas las celdas del cuaderno.
 1. Revise el nuevo trabajo que se crea cada vez que entrena un modelo.
 
