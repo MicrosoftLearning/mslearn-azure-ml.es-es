@@ -109,7 +109,7 @@ El uso de un cuaderno asociado a una instancia de proceso es ideal para la exper
 
     > Seleccione **Autenticar** y siga los pasos necesarios si aparece una notificación en la que se le pide que se autentique.
 
-1. Compruebe que el cuaderno usa el kernel de **Python 3.8- AzureML**.
+1. Comprueba que el cuaderno usa el kernel de **Python 3.10- AzureML**.
 1. Ejecute todas las celdas para explorar el código y entrenar un modelo.
 1. Seleccione el icono de &#9776; en la parte superior del cuaderno para ver el **menú del cuaderno**.
 1. Expanda **Exportar como** y seleccione **Python (.py)** para convertir el cuaderno en un script de Python.
