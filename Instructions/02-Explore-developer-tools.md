@@ -185,7 +185,7 @@ Ahora que ha comprobado que se ha creado el proceso necesario, puede usar el SDK
 
     > Seleccione **Autenticar** y siga los pasos necesarios si aparece una notificación en la que se le pide que se autentique.
 
-1. Comprueba que el cuaderno usa el kernel de **Python 3.8 - AzureML** en la esquina superior derecha del entorno del cuaderno. Cada kernel tiene su propia imagen con su propio conjunto de paquetes preinstalados.
+1. Comprueba que el cuaderno usa el kernel de **Python 3.10 - AzureML** en la esquina superior derecha del entorno del cuaderno. Cada kernel tiene su propia imagen con su propio conjunto de paquetes preinstalados.
 1. Ejecute todas las celdas del cuaderno.
 
 Se creará un nuevo trabajo en el área de trabajo de Azure Machine Learning. El trabajo realiza un seguimiento de las entradas definidas en la configuración del trabajo, el código usado y las salidas como métricas para evaluar el modelo.

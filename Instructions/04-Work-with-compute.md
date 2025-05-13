@@ -145,7 +145,7 @@ Los cuadernos son ideales para el desarrollo o el trabajo iterativo durante la e
 
     > Seleccione **Autenticar** y siga los pasos necesarios si aparece una notificación en la que se le pide que se autentique.
 
-1. Compruebe que el cuaderno usa el kernel de **Python 3.8- AzureML**.
+1. Comprueba que el cuaderno usa el kernel de **Python 3.10- AzureML**.
 1. Ejecute todas las celdas del cuaderno.
 
 ## Eliminación de recursos de Azure
